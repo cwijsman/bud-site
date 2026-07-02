@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="1800">
+<title>Bud — Alpha Agentics paper portfolio</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--ink:#e6edf3;--mut:#8b949e;--grid:#30363d;--green:#3fb950;--red:#f85149;--acc:#f0b429}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:26px 20px 48px}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+h1{font-size:22px;margin:0 0 4px;font-weight:700}.sub{color:var(--mut);font-size:13px}
+.hr{text-align:right}.badge{font-size:13px;font-weight:700}.badge.ok{color:var(--green)}.badge.bad{color:var(--red)}
+.hr .win{color:var(--mut);font-size:12px;margin-top:4px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:20px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.cards{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--card);border:1px solid var(--grid);border-radius:12px;padding:14px 14px 12px}
+.clabel{color:var(--mut);font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.cval{font-size:20px;font-weight:700;margin:7px 0 3px}.csub{color:var(--mut);font-size:11px}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.grid2{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;margin-bottom:20px}
+@media(max-width:820px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--grid);border-radius:12px;padding:16px}
+.panel h2{font-size:14px;margin:0 0 12px;font-weight:700}
+.chartbox{position:relative;height:260px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:var(--mut);font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:0 8px 8px;border-bottom:1px solid var(--grid)}
+td{padding:9px 8px;border-bottom:1px solid rgba(48,54,61,.5)}td.sn{font-weight:700}td.mut{color:var(--mut)}
+tr:last-child td{border-bottom:none}
+.foot{color:var(--mut);font-size:11.5px;margin-top:22px;text-align:center}
+</style></head><body><div class="wrap">
+<div class="head">
+  <div><h1>&#9889; Bud &mdash; Alpha Agentics paper portfolio</h1>
+    <div class="sub">2026-07-04 05:00 UTC &nbsp;&middot;&nbsp; PAPER &nbsp;&middot;&nbsp; TAO $214.35 / £160.49</div></div>
+  <div class="hr"><span class="badge ok">&#9679; ledger OK</span><div class="win">last 24h: 0 closes &nbsp;<span class="pos">+0.0000 &tau;</span></div></div>
+</div>
+<div class="cards"><div class="card"><div class="clabel">Total portfolio</div><div class="cval pos">2.5019 &tau;</div><div class="csub">ROI +0.08%</div></div><div class="card"><div class="clabel">USD value</div><div class="cval ">$536.28</div><div class="csub">at current price</div></div><div class="card"><div class="clabel">GBP value</div><div class="cval ">&pound;401.53</div><div class="csub">at current price</div></div><div class="card"><div class="clabel">Realized P&amp;L</div><div class="cval pos">+0.0033 &tau;</div><div class="csub">7 closed trades</div></div><div class="card"><div class="clabel">Free / liquid</div><div class="cval ">2.0033 &tau;</div><div class="csub">80.1% of pot</div></div><div class="card"><div class="clabel">Open positions</div><div class="cval ">4</div><div class="csub">of 128 scored</div></div></div>
+<div class="grid2">
+  <div class="panel"><h2>Portfolio performance &mdash; <span style="color:var(--green)">TAO amount</span> vs <span style="color:var(--red)">USD value</span></h2><div class="chartbox"><canvas id="eq"></canvas></div></div>
+  <div class="panel"><h2>Allocation</h2><div class="chartbox"><canvas id="al"></canvas></div></div>
+</div>
+<div class="panel" style="margin-bottom:20px"><h2>Subnet positions</h2>
+  <table><thead><tr><th>Subnet</th><th>Tier</th><th>Size &tau;</th><th>Entry</th><th>Current</th><th>uP&amp;L</th><th>Alloc</th></tr></thead>
+  <tbody><tr><td class="sn">sn110</td><td class="mut">tier_1</td><td>0.1750</td><td class="mut">0.010899</td><td>0.010912</td><td class="pos">+0.12%</td><td>7.0%</td></tr><tr><td class="sn">sn48</td><td class="mut">tier_3</td><td>0.0750</td><td class="mut">0.005235</td><td>0.005315</td><td class="pos">+1.54%</td><td>3.0%</td></tr><tr><td class="sn">sn112</td><td class="mut">tier_1</td><td>0.1750</td><td class="mut">0.006094</td><td>0.006049</td><td class="neg">-0.74%</td><td>7.0%</td></tr><tr><td class="sn">sn10</td><td class="mut">tier_3</td><td>0.0750</td><td class="mut">0.006664</td><td>0.006537</td><td class="neg">-1.91%</td><td>3.0%</td></tr></tbody></table></div>
+<div class="panel"><h2>Recent closes (last 24h)</h2>
+  <table><thead><tr><th>Subnet</th><th>ROI</th><th>P&amp;L</th><th>Reason</th></tr></thead>
+  <tbody><tr><td colspan="4" class="mut">no closes in the last 24h</td></tr></tbody></table></div>
+<div class="foot">Equity 2.5019 &tau; &middot; ROI <span class="pos">+0.08%</span> &middot; &asymp; $536 &middot; auto-refreshes every 30&nbsp;min &middot; regenerated each digest &middot; PAPER, not a live-trading record.</div>
+</div>
+<script>
+const D={"series": [["2026-07-01 09:34", 2.4961, 495.38], ["2026-07-01 10:05", 2.4961, 495.38], ["2026-07-01 10:35", 2.4934, 489.75], ["2026-07-01 11:03", 2.4934, 489.75], ["2026-07-01 11:32", 2.4919, 490.47], ["2026-07-01 12:04", 2.4919, 490.47], ["2026-07-01 12:31", 2.5025, 492.56], ["2026-07-01 13:01", 2.5025, 492.67], ["2026-07-01 13:33", 2.5209, 503.84], ["2026-07-01 14:01", 2.5209, 503.84], ["2026-07-01 14:31", 2.5191, 503.48], ["2026-07-01 15:02", 2.5191, 506.07], ["2026-07-01 15:31", 2.5182, 505.89], ["2026-07-01 16:04", 2.5182, 516.12], ["2026-07-01 16:32", 2.5209, 512.53], ["2026-07-01 17:01", 2.5209, 512.53], ["2026-07-01 17:35", 2.4396, 501.05], ["2026-07-01 18:03", 2.4396, 501.05], ["2026-07-01 18:32", 2.4338, 496.03], ["2026-07-01 19:03", 2.4338, 496.03], ["2026-07-01 19:31", 2.4338, 496.2], ["2026-07-01 20:01", 2.4338, 496.2], ["2026-07-01 23:22", 2.5094, 516.28], ["2026-07-01 23:30", 2.5094, 516.28], ["2026-07-02 00:01", 2.5094, 508.04], ["2026-07-02 00:31", 2.5092, 508.0], ["2026-07-02 01:01", 2.5092, 508.88], ["2026-07-02 01:33", 2.5091, 514.94], ["2026-07-02 02:01", 2.5091, 514.94], ["2026-07-02 02:32", 2.5091, 518.13], ["2026-07-02 03:00", 2.5091, 518.13], ["2026-07-02 03:30", 2.5091, 518.13], ["2026-07-02 04:01", 2.5091, 521.4], ["2026-07-02 04:30", 2.5091, 521.4], ["2026-07-02 05:00", 2.5091, 518.03], ["2026-07-02 05:32", 2.5091, 514.21], ["2026-07-02 06:00", 2.5091, 514.21], ["2026-07-02 06:32", 2.5091, 511.12], ["2026-07-02 07:02", 2.5091, 511.12], ["2026-07-02 07:31", 2.5091, 511.12], ["2026-07-02 08:01", 2.5091, 512.07], ["2026-07-02 08:31", 2.5091, 516.23], ["2026-07-02 09:01", 2.5091, 516.23], ["2026-07-02 09:31", 2.5091, 522.65], ["2026-07-02 10:01", 2.5091, 522.65], ["2026-07-02 10:31", 2.5091, 522.65], ["2026-07-02 11:00", 2.5091, 525.28], ["2026-07-02 11:32", 2.5091, 531.84], ["2026-07-02 12:02", 2.5091, 531.84], ["2026-07-02 12:32", 2.5091, 533.5], ["2026-07-02 13:00", 2.5091, 533.5], ["2026-07-02 13:31", 2.5091, 547.05], ["2026-07-02 14:01", 2.5091, 547.05], ["2026-07-02 14:31", 2.5091, 547.05], ["2026-07-02 15:01", 2.5091, 534.98], ["2026-07-02 15:31", 2.5091, 534.98], ["2026-07-02 16:01", 2.5091, 531.39], ["2026-07-02 16:31", 2.5091, 531.29], ["2026-07-02 17:01", 2.5091, 531.29], ["2026-07-02 17:30", 2.5091, 531.29], ["2026-07-02 18:00", 2.5091, 531.89], ["2026-07-02 18:31", 2.5078, 531.62], ["2026-07-02 19:05", 2.5078, 528.13], ["2026-07-02 19:30", 2.5073, 528.03], ["2026-07-02 20:04", 2.5073, 527.87], ["2026-07-02 20:32", 2.5072, 526.61], ["2026-07-02 21:00", 2.5072, 526.61], ["2026-07-02 21:31", 2.5043, 523.57], ["2026-07-02 22:03", 2.5043, 523.57], ["2026-07-02 22:32", 2.5038, 522.3], ["2026-07-02 23:03", 2.5038, 522.3], ["2026-07-02 23:30", 2.5045, 522.45], ["2026-07-03 00:02", 2.5045, 523.84], ["2026-07-03 00:31", 2.5033, 523.59], ["2026-07-03 01:02", 2.5033, 526.06], ["2026-07-03 01:30", 2.5033, 526.06], ["2026-07-03 02:00", 2.5033, 535.01], ["2026-07-03 02:31", 2.5033, 533.51], ["2026-07-03 03:00", 2.5033, 533.51], ["2026-07-03 03:32", 2.5033, 531.21], ["2026-07-03 04:01", 2.5033, 531.21], ["2026-07-03 04:31", 2.5033, 531.21], ["2026-07-03 05:01", 2.5033, 527.86], ["2026-07-03 05:30", 2.5033, 527.86], ["2026-07-03 06:01", 2.5033, 534.1], ["2026-07-03 06:32", 2.5033, 533.44], ["2026-07-03 07:00", 2.5033, 533.44], ["2026-07-03 07:30", 2.5033, 533.44], ["2026-07-03 08:00", 2.5033, 534.22], ["2026-07-03 08:31", 2.5033, 536.03], ["2026-07-03 09:00", 2.5033, 536.03], ["2026-07-03 09:31", 2.5033, 535.56], ["2026-07-03 10:00", 2.5033, 535.56], ["2026-07-03 10:31", 2.5033, 540.07], ["2026-07-03 11:01", 2.5033, 540.07], ["2026-07-03 11:30", 2.5033, 541.83], ["2026-07-03 12:01", 2.5033, 541.83], ["2026-07-03 12:31", 2.5033, 539.85], ["2026-07-03 13:00", 2.5033, 539.85], ["2026-07-03 13:03", 2.5033, 539.85], ["2026-07-03 13:30", 2.5033, 539.85], ["2026-07-03 14:02", 2.5033, 541.74], ["2026-07-03 14:32", 2.5033, 541.74], ["2026-07-03 15:00", 2.5033, 543.21], ["2026-07-03 15:31", 2.5033, 543.21], ["2026-07-03 15:59", 2.5033, 537.52], ["2026-07-03 16:01", 2.5033, 537.52], ["2026-07-03 16:30", 2.5033, 537.52], ["2026-07-03 17:01", 2.5033, 536.88], ["2026-07-03 17:31", 2.5033, 537.71], ["2026-07-03 18:01", 2.5033, 537.71], ["2026-07-03 18:30", 2.5033, 537.71], ["2026-07-03 19:01", 2.5033, 537.29], ["2026-07-03 19:30", 2.5033, 537.29], ["2026-07-03 20:00", 2.5033, 537.16], ["2026-07-03 20:31", 2.5033, 537.16], ["2026-07-03 21:03", 2.5033, 542.12], ["2026-07-03 21:33", 2.5046, 541.96], ["2026-07-03 22:01", 2.5046, 541.96], ["2026-07-03 22:30", 2.5063, 542.33], ["2026-07-03 23:01", 2.5063, 539.52], ["2026-07-03 23:31", 2.5063, 539.52], ["2026-07-04 00:01", 2.5063, 539.62], ["2026-07-04 00:31", 2.5047, 539.82], ["2026-07-04 01:01", 2.5047, 539.82], ["2026-07-04 01:30", 2.5021, 539.26], ["2026-07-04 02:03", 2.5021, 535.25], ["2026-07-04 02:31", 2.5058, 535.44], ["2026-07-04 03:01", 2.5058, 535.44], ["2026-07-04 03:32", 2.5117, 537.07], ["2026-07-04 04:01", 2.5117, 537.07], ["2026-07-04 04:32", 2.5019, 536.24]], "donutLabels": ["sn110", "sn48", "sn112", "sn10", "Free / liquid"], "donutVals": [0.175, 0.075, 0.175, 0.075, 2.0033]};
+const gridc="#30363d",mutc="#8b949e";
+Chart.defaults.color=mutc;Chart.defaults.font.family="-apple-system,Segoe UI,Roboto,sans-serif";
+new Chart(document.getElementById("eq"),{type:"line",
+ data:{labels:D.series.map(p=>p[0]),datasets:[
+   {label:"TAO amount (τ)",data:D.series.map(p=>p[1]),borderColor:"#3fb950",backgroundColor:"rgba(63,185,80,.10)",fill:true,tension:.25,pointRadius:0,borderWidth:2,yAxisID:"yTao"},
+   {label:"USD value ($)",data:D.series.map(p=>p[2]),borderColor:"#f85149",backgroundColor:"transparent",tension:.25,pointRadius:0,borderWidth:2,yAxisID:"yUsd"}]},
+ options:{maintainAspectRatio:false,interaction:{mode:"index",intersect:false},
+   plugins:{legend:{display:true,labels:{boxWidth:12,font:{size:11}}}},
+   scales:{x:{grid:{color:gridc},ticks:{maxTicksLimit:6}},
+     yTao:{position:"left",grid:{color:gridc},title:{display:true,text:"τ",color:"#3fb950"}},
+     yUsd:{position:"right",grid:{drawOnChartArea:false},title:{display:true,text:"$",color:"#f85149"}}}}});
+const dc=["#f0b429","#58a6ff","#3fb950","#bc8cff","#39c5cf","#f85149","#db61a2","#ffa657","#7ee787","#a5d6ff"];
+const dcolors=D.donutLabels.map((l,i)=>l.indexOf("Free")===0?"#30363d":dc[i%dc.length]);
+new Chart(document.getElementById("al"),{type:"doughnut",
+ data:{labels:D.donutLabels,datasets:[{data:D.donutVals,backgroundColor:dcolors,borderColor:"#0d1117",borderWidth:2}]},
+ options:{maintainAspectRatio:false,cutout:"58%",plugins:{legend:{position:"right",labels:{boxWidth:12,font:{size:11}}}}}});
+if(!D.series||D.series.length<2){document.getElementById("eq").parentElement.innerHTML='<div style="display:flex;height:100%;align-items:center;justify-content:center;color:#8b949e;text-align:center;font-size:13px">equity history accumulating<br>(curve appears after a few cycles)</div>';}
+</script></body></html>
